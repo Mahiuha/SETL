@@ -17,7 +17,7 @@
 
 Subsequent response definitions will only detail the expected value of the `data field`
 
-### List all Devices
+### List all Devices :rocket:
 
 **Definition**
 
