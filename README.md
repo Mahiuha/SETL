@@ -4,7 +4,7 @@
     <img src="assets/images/logo.png">
 </p>
 
-## Registering a Device.
+## Registering a Device. :seedling:
 
 ### Usage
 
