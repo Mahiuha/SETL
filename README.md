@@ -1,8 +1,8 @@
 # SETL (Safe Energy Transmission Lines)
 
-<center>
+<p align="center">
     <img src="assets/images/logo.png">
-</center>
+</p>
 
 ## Registering a Device.
 
