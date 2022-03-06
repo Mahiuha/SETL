@@ -1,4 +1,4 @@
-# SETL (Safe Energy Transmission Lines) :penguin: :construction:
+# SETL (Safe Energy Transmission Lines) :penguin: :construction: :pushpin:
 
 <p align="left">
     <img src="assets/images/logo.png">
