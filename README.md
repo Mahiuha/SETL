@@ -76,7 +76,7 @@ If a device with the given identifier already exists, the existing device will b
 }
 ```
 
-## Lookup device
+## Lookup device :mag::mag::mag:
 
 `GET /device/<identifier>`
 
