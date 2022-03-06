@@ -1,6 +1,6 @@
 # SETL (Safe Energy Transmission Lines) :penguin:
 
-<p align="center">
+<p align="left">
     <img src="assets/images/logo.png">
 </p>
 
