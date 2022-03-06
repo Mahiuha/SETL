@@ -94,7 +94,7 @@ If a device with the given identifier already exists, the existing device will b
 }
 ```
 
-## Delete a device
+## Delete a device :no_entry::bangbang:
 
 **Definition**
 
