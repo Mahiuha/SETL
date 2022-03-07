@@ -1,8 +1,10 @@
-# SETL (Safe Energy Transmission Lines)
+# SETL (Safe Energy Transmission Lines) :penguin: :construction: :pushpin:
 
-![alx-internet (6)](https://user-images.githubusercontent.com/35099243/156940304-4d500c0c-64be-4af1-a7f9-ea0fcdccbcf7.png)
+<p align="left">
+    <img src="assets/images/logo.png">
+</p>
 
-## Registering a Device.
+## Registering a Device. :seedling:
 
 ### Usage
 
@@ -15,7 +17,7 @@
 
 Subsequent response definitions will only detail the expected value of the `data field`
 
-### List all Devices
+### List all Devices :rocket::rocket::rocket::rocket::rocket:
 
 **Definition**
 
@@ -48,7 +50,7 @@ Subsequent response definitions will only detail the expected value of the `data
 ]
 ```
 
-### Registering a new device
+### Registering a new device :computer::desktop_computer:
 
 **Definition**
 
@@ -74,7 +76,7 @@ If a device with the given identifier already exists, the existing device will b
 }
 ```
 
-## Lookup device
+## Lookup device :mag::mag::mag:
 
 `GET /device/<identifier>`
 
@@ -92,7 +94,7 @@ If a device with the given identifier already exists, the existing device will b
 }
 ```
 
-## Delete a device
+## Delete a device :no_entry::bangbang:
 
 **Definition**
 
@@ -103,7 +105,7 @@ If a device with the given identifier already exists, the existing device will b
 - `404 Not Found` if the device does not exist
 - `204 No Content` on success
 
-### Technologies used.
+### Technologies used. :whale2:
 
 ## Author
 
