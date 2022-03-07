@@ -105,4 +105,6 @@ If a device with the given identifier already exists, the existing device will b
 
 ### Technologies used.
 
+## Author
 
+- **Joseph Mahiuha** - [Mahiuha](https:///github.com/Mahiuha)
