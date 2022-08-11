@@ -1,0 +1,37 @@
+import device "../../libraries/go/device/device.def"
+
+service DMX {
+    path = "dmx"
+
+    rpc GetMegaParProfile(GetMegaParProfileRequest) MegaParProfileResponse {
+        method = "GET"
+        path = "/mega-par-profile"
+    }
+
+    rpc UpdateMegaParProfile(UpdateMegaParProfileRequest) MegaParProfileResponse {
+        method = "PATCH"
+        path = "/mega-par-profile"
+    }
+}
+
+message MegaParProfileState {
+    bool power
+    uint8 brightness
+    rgb color
+    uint8 strobe
+}
+
+message GetMegaParProfileRequest {
+    string device_id (required)
+}
+
+message UpdateMegaParProfileRequest {
+    string device_id (required)
+    MegaParProfileState state
+}
+
+message MegaParProfileResponse {
+    device.Header header
+    map[string]device.Property properties
+    MegaParProfileState state
+}

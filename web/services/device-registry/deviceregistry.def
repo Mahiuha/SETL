@@ -1,0 +1,65 @@
+import device "../../libraries/go/device/device.def"
+
+service DeviceRegistry {
+    path = "device-registry"
+
+    rpc GetDevice(GetDeviceRequest) GetDeviceResponse {
+        method = "GET"
+        path = "/device"
+    }
+
+    rpc ListDevices(ListDevicesRequest) ListDevicesResponse {
+        method = "GET"
+        path = "/devices"
+    }
+
+    rpc GetRoom(GetRoomRequest) GetRoomResponse {
+        method = "GET"
+        path = "/room"
+    }
+
+    rpc ListRooms(ListRoomsRequest) ListRoomsResponse {
+        method = "GET"
+        path = "/rooms"
+    }
+}
+
+// ---- Domain messages ---- //
+
+message Room {
+    string id (required)
+    string name (required)
+    []device.Header devices
+}
+
+// ---- Request & Response messages ---- //
+
+message GetDeviceRequest {
+    string device_id (required)
+}
+
+message GetDeviceResponse {
+    device.Header device_header
+}
+
+message ListDevicesRequest {
+    string controller_name
+}
+
+message ListDevicesResponse {
+    []device.Header device_headers
+}
+
+message GetRoomRequest {
+    string room_id (required)
+}
+
+message GetRoomResponse {
+    Room room
+}
+
+message ListRoomsRequest {}
+
+message ListRoomsResponse {
+    []Room rooms
+}

@@ -1,0 +1,56 @@
+message Header {
+    // id is the globally unique identifier for this device
+    string id (required)
+
+    // name is the friendly name for this device
+    string name (required)
+
+    // type is the specific device type e.g. HS100
+    string type (required)
+
+    // kind is the kind of device e.g. plug
+    string kind (required)
+
+    // controller_name is the name of the controller that manages this device
+    string controller_name (required)
+
+    // attributes contains arbitrary metadata about the device
+    map[string]any attributes
+
+    // state_providers is an array of controller names that provide state for this device
+    []string state_providers
+
+    // room_id is the ID of the room to which this device belongs
+    string room_id
+}
+
+message Property {
+    string type (required)
+    float64 min
+    float64 max
+    string interpolation
+    []Option options
+}
+
+message Command {
+    map[string]Arg args
+}
+
+message Arg {
+    bool required (required)
+    string type (required)
+    float64 min
+    float64 max
+    []Option options
+}
+
+message Option {
+    string value (required)
+    string name (required)
+}
+
+message DeviceStateChangedEvent {
+    event_name = "device-state-changed"
+    Header header (required)
+    any state (required)
+}
