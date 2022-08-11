@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# This should be run from the web.client directory
+
+docker \
+  run --rm -it \
+  --volume "$PWD":/usr/src/app \
+  --workdir /usr/src/app \
+  node:15 npm "$@"

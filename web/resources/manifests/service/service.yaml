@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .ServiceName }}
+  labels:
+    app: {{ .ServiceName }}
+spec:
+  type: NodePort
+  ports:
+    - name: http
+      port: {{ .ServicePort }} # The port exposed inside the k8s cluster
+      targetPort: {{ .ContainerPort }} # The port that the pod listens on
+      {{ if gt .NodePort 0 }}nodePort: {{ .NodePort }}{{ end }}
+  selector:
+    app: {{ .ServiceName }}
